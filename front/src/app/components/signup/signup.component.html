@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form [formGroup]="form" *ngIf="!isSuccessful" name="form" (ngSubmit)="onSubmit()" novalidate>
+                <h1>Sign up</h1>
+              
+                <span>Create a new account</span>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Username" name="username"
+                        formControlName="username" required />
+                </div>
+                <span *ngIf="!form.get('username').valid && form.get('username').touched" style="color: red;">Invalid
+                    Username </span>
+
+
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="email" name="email" formControlName="email"
+                        required />
+                </div>
+                <span *ngIf="!form.get('email').valid && form.get('email').touched" style="color: red;">Invalid Email
+                </span>
+                <div class="form-group">
+                    <input class="form-control" type="password" placeholder="password" name="password"
+                        formControlName="password" required />
+                </div>
+                <span *ngIf="!form.get('password').valid && form.get('password').touched" style="color: red;">Invalid
+                    Password</span>
+
+
+                <br>
+                <button type="submit" [disabled]="!form.valid">Sign Up</button>
+            </form>
+            <div class="alert alert-success" *ngIf="isSuccessful">
+                Your registration is successful!
+                <br><br>
+                <button class="btn btn-secondary btn-block" routerLink="/signin"> Go To Login</button>
+            </div>
+
+        </div>
+        <div class="overlay-container" id="overlayCon">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <img src="assets/images/signup.png" alt="Sign In Image">
+                </div>
+            </div>
+            <button id="overlayBtn"></button>
+        </div>
+    </div>
+</body>
+
+<app-footer></app-footer>
+
+<!-- JS code -->
+<script>
+    const container = document.getElementById('container');
+    const overlayBtn = document.getElementById('overlayBtn');
+
+    overlayBtn.addEventListener('click', () => {
+        container.classList.toggle('right-panel-active');
+    });
+</script>

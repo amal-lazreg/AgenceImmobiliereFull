@@ -1,0 +1,361 @@
+<app-navbar></app-navbar>
+
+
+<section class="hero-wrap js-fullheight" style="background-image: url('assets/images/agence.jpg');" data-section="home"
+	data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+			data-scrollax-parent="true">
+			<div class="col-md-6 pt-5">
+				<div class="mt-5">
+					<span class="subheading" >{{'Welcome to RealityShowcase' | translate }}</span>
+
+					<p class="mb-4">{{'Discover a world of real estate possibilities with Reality Showcase, where every house becomes a home and every transaction is a unique opportunity.' | translate }} </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 text-center">
+		<h2 class="mb-5"><span></span> </h2>
+	</div>
+</section>
+
+<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+	<div class="col-12 text-center">
+		<h2 class="mb-5"> <span></span> </h2>
+	</div>
+	<div class="container">
+		<div class="row d-flex">
+			<div class="col-md-6 col-lg-5 d-flex">
+				<div class="img d-flex align-self-stretch align-items-center"
+					style="background-image:url(assets/images/agence2.jpg);">
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-7 pl-lg-5 py-md-5">
+				<div class="py-md-5">
+					<div class="">
+						<div class="mt-5">
+							<h2 class="mb-4">{{'We Are' | translate}}<span> RealityShowcase</span> <br>{{'A real estate agency' | translate}}</h2>
+							<p>{{'Explore Reality Showcase and immerse yourself in the exhilarating world of real estate. We offer you a unique selection of properties, accompanied by exceptional customer service. Whether you are looking for a house, an apartment or an investment, begin your journey with us to make your real estate projects a reality.' | translate }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 text-center">
+		<h2 class="mb-5"><span></span> </h2>
+	</div>
+</section>
+
+
+<section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="row justify-content-center mb-5 pb-2">
+                <div class="col-md-8 text-center heading-section">
+                    <h2 class="mb-4">{{'Here are our Properties for sale.' | translate }}</h2>
+					<p>{{'Discover the experiences of our satisfied customers who have benefited from our products and services. Their feedback reflects our commitment to excellence and customer satisfaction. Discover how we have positively impacted their lives and why they continue to choose us.' | translate }}</p>                </div>
+            </div>
+            <div class="col-6">
+                <h3 class="mb-3">{{'Properties for sale' | translate }}</h3>
+            </div>
+            <div class="col-6 text-right">
+                <a class="btn btn-primary mb-3 mr-1" href="/avendre" role="button" data-slide="prev">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+						<path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+					</svg>
+				</a>
+              
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4 mb-3" *ngFor="let annonce of firstThreeAnnoncesSales">
+                                    <div class="card">
+                                        <img class="img-fluid" [src]="annonce.photos" alt="Image de l'annonce" class="image" style="width:100%;">
+                                        <div class="card-body">
+                                            <h4 class="card-title">{{ annonce.titre }}</h4>
+                                            <p class="card-text">{{ annonce.description }}</p>
+                                        </div>
+										<a class="btn btn-primary mb-3"
+  											 [routerLink]="['/detailsAnnouce', annonce._id]"
+ 											  role="button">
+ 											 <span>More Details</span>
+										</a>	 
+										
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="row justify-content-center mb-5 pb-2">
+                <div class="col-md-8 text-center heading-section">
+                    <h2 class="mb-4">Here are our properties for rent.</h2>
+                    <p>Discover our exclusive selection of properties for rent. Each property is carefully selected to meet your needs and expectations. 
+						Browse our list to find your future home and enjoy a pleasant and comfortable living environment.</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <h3 class="mb-3">Properties for Rent</h3>
+            </div>
+            <div class="col-6 text-right">
+                <a class="btn btn-primary mb-3 mr-1" href="/alouer" role="button" data-slide="prev">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+						<path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+					  </svg>          
+		      </a>
+              
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4 mb-3" *ngFor="let annonce of firstThreeAnnoncesrents">
+                                    <div class="card">
+                                        <img class="img-fluid" [src]="annonce.photos" alt="Image de l'annonce" class="image" style="width:100%;">
+                                        <div class="card-body">
+                                            <h4 class="card-title">{{ annonce.titre }}</h4>
+                                            <p class="card-text">{{ annonce.description }}</p>
+                                        </div>
+										<a class="btn btn-primary mb-3"
+  											 [routerLink]="['/detailsAnnouce', annonce._id]"
+ 											  role="button">
+ 											 <span>More Details</span>
+										</a>															 
+								     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="img ftco-counter" id="doctor-section">
+	<div class="container-fluid px-5">
+		<div class="row justify-content-center mb-5 pb-2">
+			<div class="col-md-8 text-center heading-section ">
+				<h2 class="mb-4">Here are our customer testimonials.</h2>
+				<p>Here are our customer testimonials. We are proud to share the experiences of our satisfied clients
+					who have benefited from our products and services. Their feedback reflects our commitment to
+					excellence and customer satisfaction. Discover how we have made a positive impact on their lives and
+					why they continue to choose us.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-lg-3 ">
+				<div class="staff">
+					<div class="img-wrap d-flex align-items-stretch">
+						<div class="img align-self-stretch" style="background-image: url(assets/images/client1.jpg);">
+						</div>
+					</div>
+					<div class="text pt-3 text-center pb-2" >
+						<h3 class="mb-2">Mr. Lloyd Wilson</h3>
+						<div class="faded pb-2 heading-section">
+							<h6>Thanks to RealityShowcase, I found my dream home. Their team was incredibly responsive
+								and understood my needs.
+								The buying process was smooth and stress-free. I highly recommend their services to
+								anyone looking for a new home.</h6>
+							<ul class="ftco-social text-center">
+
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 ">
+				<div class="staff">
+					<div class="img-wrap d-flex align-items-stretch">
+						<div class="img align-self-stretch" style="background-image: url(assets/images/client4.jpg);">
+						</div>
+					</div>
+					<div class="text pt-3 text-center">
+						<h3 class="mb-2">Mme. Rachel Parker</h3>
+						<div class="faded aded pb-2 heading-section">
+							<h6>I have been using RealityShowcase for over a year now, and I am extremely satisfied.
+								Their knowledge of the real estate market is unmatched,
+								and they have always been available to answer my questions. My experience has been
+								positive from start to finish."</h6>
+							<ul class="ftco-social text-center">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 ">
+				<div class="staff">
+					<div class="img-wrap d-flex align-items-stretch">
+						<div class="img align-self-stretch" style="background-image: url(assets/images/client7.jpg);">
+						</div>
+					</div>
+					<div class="text pt-3 text-center">
+						<h3 class="mb-2">Mr. Ian Smith</h3>
+						<div class="faded aded pb-2 heading-section">
+							<h6>RealityShowcase transformed my housing search with their innovative approach and
+								dedicated support. Their expertise helped me overcome significant challenges,
+								and I am grateful for their unwavering commitment. They truly care about their clients.
+							</h6>
+							<ul class="ftco-social text-center">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 ">
+				<div class="staff">
+					<div class="img-wrap d-flex align-items-stretch">
+						<div class="img align-self-stretch" style="background-image: url(assets/images/client2.jpg);">
+						</div>
+					</div>
+					<div class="text pt-3 text-center">
+						<h3 class="mb-2">Mme. Alicia Henderson</h3>
+						<div class="faded aded pb-2 heading-section">
+							<h6>Choosing RealityShowcase was one of the best decisions I have ever made. Their attention
+								to detail and personalized service made a huge difference.
+								I highly recommend them to anyone in need of quality real estate services.</h6>
+							<ul class="ftco-social text-center">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+ 
+  
+ 
+  
+<div class="row justify-content-center mb-5 pb-3">
+	<div class="col-md-7 heading-section text-center ">
+		<h2 class="mb-4">Partners</h2>
+		<p>We are proud to present our valued partners.</p>
+	</div>
+</div>
+
+<div class="image-container">
+	<div *ngFor="let partenaire of filteredPartenaires" class="image-wrapper">
+		<img [src]="partenaire.photos" alt="Image du partenaire" class="image">
+	</div>
+  </div>
+
+  
+
+
+
+
+ 
+  
+  
+ 
+ 
+  
+
+
+
+
+
+
+
+<section class="ftco-section contact-section" id="contact-section">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section text-center ">
+				<h2 class="mb-4">For more information</h2>
+				<p>We are at your disposal if you have any questions, so do not hesitate to contact us.</p>
+			</div>
+		</div>
+		<div class="row d-flex contact-info mb-5">
+
+			<div class="col-md-6 col-lg-3 d-flex ">
+				<div class="align-self-stretch box p-4 text-center bg-light">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-phone2"></span>
+					</div>
+					<h3 class="mb-4">Contact Number</h3>
+					<p><a href="tel://1234567920">+ 1235 2355 98</a></p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 d-flex">
+				<div class="align-self-stretch box p-4 text-center bg-light">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="blue" class="bi bi-envelope" viewBox="0 0 16 16">
+							<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+						</svg>
+					</div>
+					<h3 class="mb-4">Email Address</h3>
+					<p><a href="mailto:info@yoursite.com">Realityshowcase@gmail.com</a></p>
+				</div>
+			</div>
+			
+			<div class="col-md-6 col-lg-3 d-flex">
+				<div class="align-self-stretch box p-4 text-center bg-light">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-globe"></span>
+					</div>
+					<h3 class="mb-4">Website</h3>
+					<p><a href="#">RealityShowcase.com</a></p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 d-flex">
+				<div class="align-self-stretch box p-4 text-center bg-light">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="blue" class="bi bi-linkedin" viewBox="0 0 16 16">
+							<path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+						</svg>
+					</div>
+					<h3 class="mb-4">linkedin</h3>
+					<p><a href="mailto:info@yoursite.com">RealityShowcase</a></p>
+				</div>
+			</div>
+
+		</div>
+
+
+
+	</div>
+</section>
+
+
+
+
+<app-footer></app-footer>
+
+

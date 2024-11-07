@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+   <body>
+   <div class="container" id="container">
+
+        <div class="form-container sign-in-container">
+            <form #f="ngForm" name="form" (ngSubmit)="onSubmit($event)">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <div class="infield">
+                    <input class="form-control" type="text" placeholder="Username" name="username" required
+                        [(ngModel)]="username" />
+                </div>
+                <span *ngIf="!form.get('username').valid && form.get('username').touched" style="color: red;">Invalid
+                    Username </span>
+
+                <div class="infield">
+                    <input class="form-control" type="password" placeholder="Password" name="password"
+                        [(ngModel)]="password" required />
+                </div>
+                <span *ngIf="!form.get('password').valid && form.get('password').touched" style="color: red;">Invalid
+                    Password</span>
+
+                <div>
+                    <span> Don't have an account<a href="/signup"> sign Up </a></span>
+                </div>
+                <div>
+                    <br>
+                    <button type="submit">Sign In</button>
+                </div>
+                <div class="form-group">
+                    <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+                        Login failed: {{ errorMessage }}
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="overlay-container" id="overlayCon">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <img src="assets/images/sign.png" alt="Sign In Image">
+                </div>
+            </div>
+            <button id="overlayBtn"></button>
+        </div>
+    </div>
+
+</body>
+<app-footer></app-footer>

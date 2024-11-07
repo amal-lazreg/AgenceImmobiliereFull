@@ -1,0 +1,26 @@
+
+.container {
+    margin: 2rem auto;
+    border-radius: 13px;
+}
+
+h2{
+    text-align: center;
+}
+
+#who-are-we {
+    text-align: center;
+    color: #007BFF; /* Couleur bleue */
+    font-size: 2em; /* Augmente la taille de la police */
+    font-weight: bold; /* Rend le texte en gras */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    letter-spacing: 2px; /* Ajoute un espacement entre les lettres */
+    margin-top: 20px; /* Ajoute un espace au-dessus du titre */
+}
+
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}

@@ -1,0 +1,72 @@
+
+.container {
+    margin: 2rem auto;
+    border-radius: 13px;
+}
+
+h2{
+    text-align: center;
+}
+
+#information {
+    text-align: center;
+    color: #007BFF; /* Couleur bleue */
+    font-size: 2em; /* Augmente la taille de la police */
+    font-weight: bold; /* Rend le texte en gras */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    letter-spacing: 2px; /* Ajoute un espacement entre les lettres */
+    margin-top: 20px; /* Ajoute un espace au-dessus du titre */
+}
+
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  div {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

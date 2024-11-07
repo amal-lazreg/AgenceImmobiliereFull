@@ -1,0 +1,539 @@
+app-admin-nav-bar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    height: 100vh; 
+    width: 250px; 
+    background-color: #f8f9fa; 
+    border-right: 1px solid #dee2e6; 
+    z-index: 1000; 
+  }
+  
+  .main-container {
+    margin-left: 250px; 
+    padding: 20px; 
+  }
+  
+  #content-wrapper {
+    margin-left: 0; 
+  }
+  
+  .form-inline {
+    margin-left: auto; 
+    margin-right: 20px; 
+  }
+  
+  #content {
+    padding: 20px; 
+  }
+
+  h2{
+    color: #07074d;
+  }
+  
+
+
+
+  .card {
+    --bg-card: #27272a;
+    --primary: #6d28d9;
+    --primary-800: #4c1d95;
+    --primary-shadow: #2e1065;
+    --light: #d9d9d9;
+    --zinc-800: #18181b;
+    --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+  
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Augmenté l'écart entre les éléments internes */
+  
+    padding: 1.5rem; /* Augmenté le padding */
+    width: 10rem; /* Augmenté la largeur */
+    background-color: var(--bg-card);
+  
+    border-radius: 1rem;
+    flex: 1;
+    max-width: calc(35% - 0.5rem); /* Ajustez la largeur pour permettre l'espace entre les cartes */
+  }
+  
+
+
+  .card-row {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante si nécessaire */
+    gap: 1rem; /* Ajoutez de l'espace entre les cartes */
+    margin-bottom: 1rem; /* Ajoutez de l'espace entre les lignes */
+  }
+  
+  .card {
+    flex: 1 1 calc(33.333% - 1rem); /* Chaque carte prend environ 1/3 de la largeur du conteneur moins l'espace de gap */
+    box-sizing: border-box; /* Assurez-vous que la largeur inclut le padding et la bordure */
+    /* Autres styles pour les cartes */
+  }
+  
+
+
+
+  .image_container {
+    overflow: hidden;
+    cursor: pointer;
+  
+    position: relative;
+    z-index: 5;
+  
+    width: 100%;
+    height: 12rem; /* Augmenté la hauteur de l'image */
+    background-color: var(--primary-800);
+  
+    border-radius: 0.5rem;
+  }
+  
+  .image_container .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cette propriété permet de remplir l'image tout en conservant ses proportions */
+  }
+  
+  
+  .title {
+    overflow: clip;
+  
+    width: 100%;
+  
+    font-size: 1.25rem; /* Augmenté la taille de la police du titre */
+    font-weight: 600;
+    color: var(--light);
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .size {
+    font-size: 0.875rem; /* Augmenté la taille de la police pour la taille */
+    color: var(--light);
+  }
+  
+  .list-size {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Augmenté l'écart entre les éléments de liste */
+  
+    margin-top: 0.5rem; /* Augmenté la marge au-dessus de la liste */
+  }
+  
+  .list-size .item-list-button {
+    cursor: pointer;
+  
+    padding: 0.75rem; /* Augmenté le padding des boutons de liste */
+    background-color: var(--zinc-800);
+  
+    font-size: 0.875rem; /* Augmenté la taille de la police des boutons */
+    color: var(--light);
+  
+    border: 2px solid var(--zinc-800);
+    border-radius: 0.25rem;
+  
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .item-list-button:hover {
+    border: 2px solid var(--light);
+  }
+  
+  .item-list-button:focus {
+    background-color: var(--primary);
+  
+    border: 2px solid var(--primary-shadow);
+  
+    box-shadow: inset 0px 1px 4px var(--primary-shadow);
+  }
+  
+  .action {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Augmenté l'écart entre les éléments d'action */
+  }
+  
+  .price {
+    font-size: 1.75rem; /* Augmenté la taille de la police du prix */
+    font-weight: 700;
+    color: var(--light);
+  }
+  
+  .cart-button {
+    cursor: pointer;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* Augmenté l'écart entre les éléments du bouton */
+  
+    padding: 0.75rem; /* Augmenté le padding du bouton */
+    width: 100%;
+    background-image: var(--bg-linear);
+  
+    font-size: 0.875rem; /* Augmenté la taille de la police du bouton */
+    font-weight: 500;
+    color: var(--light);
+    text-wrap: nowrap;
+  
+    border: 2px solid hsla(262, 83%, 58%, 0.5);
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 0.5rem 1px var(--light); /* Augmenté l'ombre interne du bouton */
+  }
+  
+  .cart-button .cart-icon {
+    width: 1.25rem; /* Augmenté la largeur de l'icône du panier */
+  }
+  
+
+
+
+  .size {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux divs de passer à la ligne suivante si nécessaire */
+    gap: 1rem; /* Ajoutez de l'espace entre les divs */
+  }
+  
+  .size > div {
+    flex: 1 1 calc(50% - 1rem); /* Chaque div occupe environ 50% de la largeur du conteneur moins l'espace de gap */
+    box-sizing: border-box; /* Assurez-vous que la largeur inclut le padding et la bordure */
+  }
+
+  
+
+  
+  
+  .title {
+    padding: 1rem; /* Espacement interne */
+    text-align: center; /* Centre le texte */
+    font-size: 1.2rem; /* Taille de police */
+    font-weight: bold; /* Texte en gras */
+  }
+  
+
+  .image_container {
+    background-color: #4b0082;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+}
+
+.formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: white;
+}
+
+.formbold-form-label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    margin-bottom: 12px;
+}
+
+h2 {
+    display: block;
+    font-weight: 500;
+    font-size: 30px;
+    color: #07074d;
+    margin-bottom: 12px;
+}
+
+.formbold-form-label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.formbold-form-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+}
+
+.formbold-form-input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-btn {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 14px 32px;
+    border: none;
+    font-weight: 600;
+    background-color: #6a64f1;
+    color: white;
+    cursor: pointer;
+}
+
+.formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-file-input {
+    border: 1px dashed #e0e0e0;
+    border-radius: 6px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    text-align: center;
+    position: relative;
+    margin-top: 20px; /* Ajoute de l'espace au-dessus de l'élément */
+}
+
+.formbold-file-input input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.formbold-file-input label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formbold-drop-file {
+    display: block;
+    font-weight: 600;
+    color: #07074d;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.formbold-or {
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.formbold-browse {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    display: inline-block;
+    padding: 8px 28px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.formbold-file-list {
+    border-radius: 6px;
+    background: #f5f7fb;
+    padding: 16px 32px;
+}
+
+.formbold-file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.formbold-file-item button {
+    color: #07074d;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.formbold-file-name {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    padding-right: 12px;
+}
+
+.formbold-progress-bar {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    border-radius: 8px;
+    background: #e2e5ef;
+}
+
+.formbold-progress {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #6a64f1;
+    border-radius: 8px;
+}
+
+@media (min-width: 540px) {
+    .sm\:w-half {
+        width: 50%;
+    }
+}
+
+/* add-announcement.component.css */
+.image-preview {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .img-thumbnail {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    object-fit: cover;
+  }
+  
+
+  .image-preview img {
+    width: 100px; /* Ajustez la taille selon vos besoins */
+    height: auto;
+    margin: 5px;
+    border: 1px solid #ddd;
+  }
+  
+
+  .filter-options {
+    display: flex;
+    flex-direction: row; /* Arrange labels horizontally */
+    justify-content: space-around; /* Space out labels evenly */
+    margin: 20px 0; /* Add some margin above and below */
+  }
+  
+  .filter-options label {
+    font-family: Arial, sans-serif; /* Font style for labels */
+    font-size: 16px; /* Font size for labels */
+    color: #333; /* Text color */
+    padding: 10px 20px; /* Padding around each label */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex;
+    align-items: center; /* Center radio button and text vertically */
+  }
+  
+  .filter-options input[type="radio"] {
+    margin-right: 10px; /* Space between radio button and label */
+    accent-color: #007bff; /* Blue color for the radio button */
+  }
+  
+  .filter-options input[type="radio"]:checked + label {
+    color: #007bff; /* Text color when selected */
+  }
+  
+
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar input[type="text"]::placeholder {
+    color: #888;
+  }
+  
+
+
+  /* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+  border-radius: .25rem;
+}
+
+.pagination-lg .page-link {
+  padding: .75rem 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.page-item .page-link {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #007bff;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+}
+
+.page-item .page-link:hover {
+  color: #0056b3;
+  background-color: #e9ecef;
+  border-color: #ddd;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.page-item.active .page-link:hover {
+  color: #fff;
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+  border-radius: .25rem;
+}
+  

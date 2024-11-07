@@ -1,0 +1,77 @@
+<!-- photo-upload.component.html -->
+<div class="main-container">
+    <app-admin-nav-bar></app-admin-nav-bar>
+    <div id="content-wrapper" class="d-flex flex-column content-container">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+  
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <h2 class="mb-4">Add a partner</h2>
+            </div>
+          </form>
+  
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+            <div class="topbar-divider d-none d-sm-block"></div>
+  
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                <img class="img-profile rounded-circle" src="assets/img/undraw_profile.svg">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+
+        <div class="formbold-main-wrapper">
+          <div class="formbold-form-wrapper">
+            <form (ngSubmit)="addNewPartner()">
+           
+  
+              <div class="mb-6 pt-4">
+                <label class="formbold-form-label formbold-form-label-2">Upload Logo</label>
+  
+                <div class="formbold-mb-5 formbold-file-input">
+                  <input type="file" name="photos" id="photos" (change)="onFileChange($event)" multiple />
+                  <label for="photos">
+                    <div>
+                      <span class="formbold-drop-file">Drop files here</span>
+                    </div>
+                  </label>
+                </div>
+                <!-- Displaying selected images -->
+                <div class="image-preview" *ngIf="selectedFiles.length > 0">
+                  <div *ngFor="let file of selectedFiles">
+                    <img [src]="file.dataUrl" alt="Selected Image" class="img-thumbnail" />
+                  </div>
+                </div>
+              </div>
+  
+              <div>
+                <button class="formbold-btn w-full">Send File</button>
+              </div>
+            </form>
+          </div>
+        </div>

@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css?family=Poppins:600&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --linear-grad: linear-gradient(to right, #141E30, #243B55);
+    --grad-clr1: #141E30;
+    --grad-clr2: #243B55;
+}
+
+body {
+    background: #f6f5f7;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+footer mark {
+    padding: 8px 30px;
+    border-radius: 7px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003;
+}
+
+.container {
+    width: 90%;
+    margin: 2rem auto;
+    background-color: #FFF;
+    border-radius: 13px;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.card {
+    --bg-card: #27272a;
+    --primary: #6d28d9;
+    --primary-800: #4c1d95;
+    --primary-shadow: #2e1065;
+    --light: #d9d9d9;
+    --zinc-800: #18181b;
+    --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+  
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Augmenté l'écart entre les éléments internes */
+  
+    padding: 1.5rem; /* Augmenté le padding */
+    width: 10rem; /* Augmenté la largeur */
+    background-color: var(--bg-card);
+  
+    border-radius: 1rem;
+    flex: 1;
+    max-width: calc(35% - 0.5rem); /* Ajustez la largeur pour permettre l'espace entre les cartes */
+  }
+  
+
+
+  .card-row {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante si nécessaire */
+    gap: 1rem; /* Ajoutez de l'espace entre les cartes */
+    margin-bottom: 1rem; /* Ajoutez de l'espace entre les lignes */
+  }
+  
+  .card {
+    flex: 1 1 calc(33.333% - 1rem); /* Chaque carte prend environ 1/3 de la largeur du conteneur moins l'espace de gap */
+    box-sizing: border-box; /* Assurez-vous que la largeur inclut le padding et la bordure */
+    /* Autres styles pour les cartes */
+  }
+  
+  .title {
+    overflow: clip;
+    width: 100%;
+    font-size: 1.25rem; /* Augmenté la taille de la police du titre */
+    font-weight: 600;
+    color: #d9d9d9; /* Changez la couleur selon vos besoins */
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    text-align: center; /* Ajouté pour centrer le texte */
+}
+
+  .size {
+    font-size: 0.875rem; /* Augmenté la taille de la police pour la taille */
+    color: var(--light);
+  }
+  
+  .list-size {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Augmenté l'écart entre les éléments de liste */
+  
+    margin-top: 0.5rem; /* Augmenté la marge au-dessus de la liste */
+  }
+
+  .price {
+    display: flex;
+    justify-content: center; /* Centrer le texte horizontalement */
+    align-items: center; /* Centrer le texte verticalement */
+    color: red; /* Changez la couleur à rouge */
+    font-size: 1.5rem; /* Ajustez la taille de la police si nécessaire */
+    font-weight: bold; /* Rendez le texte en gras si nécessaire */
+}
+
+
+h2.mb-4 {
+    text-align: center; /* Centre le texte */
+    color: #18181b; /* Définit la couleur du texte en bleu */
+    font-size: 2rem; /* Ajuste la taille de la police si nécessaire */
+    margin-bottom: 1.5rem; /* Espace inférieur pour le titre */
+}
+
+
+.filter-options {
+  display: flex;
+  flex-direction: row; /* Arrange labels horizontally */
+  justify-content: space-around; /* Space out labels evenly */
+  margin: 20px 0; /* Add some margin above and below */
+}
+
+.filter-options label {
+  font-family: Arial, sans-serif; /* Font style for labels */
+  font-size: 16px; /* Font size for labels */
+  color: #333; /* Text color */
+  padding: 10px 20px; /* Padding around each label */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex;
+  align-items: center; /* Center radio button and text vertically */
+}
+
+.filter-options input[type="radio"] {
+  margin-right: 10px; /* Space between radio button and label */
+  accent-color: #007bff; /* Blue color for the radio button */
+}
+
+.filter-options input[type="radio"]:checked + label {
+  color: #007bff; /* Text color when selected */
+}
+
+
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: #888;
+}
+
+
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+  border-radius: .25rem;
+}
+
+.pagination-lg .page-link {
+  padding: .75rem 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.page-item .page-link {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #007bff;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+}
+
+.page-item .page-link:hover {
+  color: #0056b3;
+  background-color: #e9ecef;
+  border-color: #ddd;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.page-item.active .page-link:hover {
+  color: #fff;
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+  border-radius: .25rem;
+}

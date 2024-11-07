@@ -1,0 +1,352 @@
+/* Conteneur principal */
+.main-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Évite le défilement horizontal */
+}
+
+/* Barre de navigation */
+app-admin-nav-bar {
+    width: 250px; /* Ajustez la largeur selon vos besoins */
+    background-color: #f8f9fa; /* Couleur de fond pour la barre de navigation */
+    height: 100%;
+    position: fixed; /* Fixe la barre de navigation à gauche */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+}
+
+/* Conteneur du contenu */
+#content-wrapper {
+    margin-left: 250px; /* Assurez-vous que cette marge est égale à la largeur de la barre de navigation */
+    width: calc(100% - 250px); /* Ajuste la largeur du contenu pour compenser la barre de navigation */
+    display: flex;
+    flex-direction: column; /* Assure que le contenu s'affiche en colonne */
+    height: 100vh;
+    overflow-y: auto; /* Permet le défilement vertical du contenu */
+}
+
+/* Partie principale du contenu */
+#content {
+    flex: 1;
+    padding: 20px; /* Ajustez les espacements selon vos besoins */
+}
+
+/* Pied de page */
+footer {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Positionne le pied de page en bas du conteneur */
+}
+
+/* Styles du formulaire */
+.formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+}
+
+.formbold-form-wrapper {
+    margin: 0 auto;
+    max-width: 550px;
+    width: 100%;
+    background: white;
+}
+
+.formbold-form-label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    margin-bottom: 12px;
+}
+
+h2 {
+    display: block;
+    font-weight: 500;
+    font-size: 30px;
+    color: #07074d;
+    margin-bottom: 12px;
+}
+
+.formbold-form-label-2 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.formbold-form-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+    resize: none;
+}
+
+.formbold-form-input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-btn {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 14px 32px;
+    border: none;
+    font-weight: 600;
+    background-color: #6a64f1;
+    color: white;
+    cursor: pointer;
+}
+
+.formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-file-input {
+    border: 1px dashed #e0e0e0;
+    border-radius: 6px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    text-align: center;
+    position: relative;
+    margin-top: 20px; /* Ajoute de l'espace au-dessus de l'élément */
+}
+
+.formbold-file-input input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.formbold-file-input label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formbold-drop-file {
+    display: block;
+    font-weight: 600;
+    color: #07074d;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.formbold-or {
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.formbold-browse {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    display: inline-block;
+    padding: 8px 28px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.formbold-file-list {
+    border-radius: 6px;
+    background: #f5f7fb;
+    padding: 16px 32px;
+}
+
+.formbold-file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.formbold-file-item button {
+    color: #07074d;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.formbold-file-name {
+    font-weight: 500;
+    font-size: 16px;
+    color: #07074d;
+    padding-right: 12px;
+}
+
+.formbold-progress-bar {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 6px;
+    border-radius: 8px;
+    background: #e2e5ef;
+}
+
+.formbold-progress {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #6a64f1;
+    border-radius: 8px;
+}
+
+@media (min-width: 540px) {
+    .sm\:w-half {
+        width: 50%;
+    }
+}
+
+/* add-announcement.component.css */
+.image-preview {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .img-thumbnail {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    object-fit: cover;
+  }
+  
+
+
+
+  .card {
+    --bg-card: #27272a;
+    --primary: #6d28d9;
+    --primary-800: #4c1d95;
+    --primary-shadow: #2e1065;
+    --light: #d9d9d9;
+    --zinc-800: #18181b;
+    --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+  
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Augmenté l'écart entre les éléments internes */
+  
+    padding: 1.5rem; /* Augmenté le padding */
+    width: 10rem; /* Augmenté la largeur */
+    background-color: var(--bg-card);
+  
+    border-radius: 1rem;
+    flex: 1;
+    max-width: calc(35% - 0.5rem); /* Ajustez la largeur pour permettre l'espace entre les cartes */
+  }
+  
+
+
+  .card-row {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne suivante si nécessaire */
+    gap: 1rem; /* Ajoutez de l'espace entre les cartes */
+    margin-bottom: 1rem; /* Ajoutez de l'espace entre les lignes */
+  }
+  
+  .card {
+    flex: 1 1 calc(33.333% - 1rem); /* Chaque carte prend environ 1/3 de la largeur du conteneur moins l'espace de gap */
+    box-sizing: border-box; /* Assurez-vous que la largeur inclut le padding et la bordure */
+    /* Autres styles pour les cartes */
+  }
+
+
+  .list-size .item-list-button {
+    cursor: pointer;
+  
+    padding: 0.75rem; /* Augmenté le padding des boutons de liste */
+    background-color: var(--zinc-800);
+  
+    font-size: 0.875rem; /* Augmenté la taille de la police des boutons */
+    color: var(--light);
+  
+    border: 2px solid var(--zinc-800);
+    border-radius: 0.25rem;
+  
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .item-list-button:hover {
+    border: 2px solid var(--light);
+  }
+  
+  .item-list-button:focus {
+    background-color: var(--primary);
+  
+    border: 2px solid var(--primary-shadow);
+  
+    box-shadow: inset 0px 1px 4px var(--primary-shadow);
+  }
+
+  .cart-button {
+    cursor: pointer;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* Augmenté l'écart entre les éléments du bouton */
+  
+    padding: 0.75rem; /* Augmenté le padding du bouton */
+    width: 100%;
+    background-image: var(--bg-linear);
+  
+    font-size: 0.875rem; /* Augmenté la taille de la police du bouton */
+    font-weight: 500;
+    color: var(--light);
+    text-wrap: nowrap;
+  
+    border: 2px solid hsla(262, 83%, 58%, 0.5);
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 0.5rem 1px var(--light); /* Augmenté l'ombre interne du bouton */
+  }
+  
+  .cart-button .cart-icon {
+    width: 1.25rem; /* Augmenté la largeur de l'icône du panier */
+  }
+
+  
+.formbold-file-item button {
+    color: #07074d;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espace entre les images */
+    overflow: hidden; /* Empêche le débordement horizontal */
+}
+
+.image-container .image-wrapper {
+    flex: 0 1 auto; /* Les éléments ne s'étirent pas au-delà de leur contenu */
+}
+
+.image-container .image {
+    width: 200px; /* Largeur de chaque image */
+    height: auto; /* Ajuste la hauteur en fonction de la largeur */
+}

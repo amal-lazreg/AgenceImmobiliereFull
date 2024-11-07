@@ -1,0 +1,123 @@
+<app-navbar></app-navbar>
+<body>
+    <div class="container" id="container">
+ 
+    <br/>
+    <h2 id="who-are-we" class="mb-4">Who we are ? </h2>
+        <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+            <div class="col-12 text-center">
+                <h2 class="mb-5"> <span></span> </h2>
+            </div>
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-md-6 col-lg-5 d-flex">
+                        <div class="img d-flex align-self-stretch align-items-center"
+                            style="background-image:url(assets/images/agence2.jpg);">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-7 pl-lg-5 py-md-5">
+                        <div class="py-md-5">
+                            <div class="">
+                                <div class="mt-5">
+                                    <h2 class="mb-4">We Are <span>RealityShowcase</span> <br>A real estate agency</h2>
+                                    <p>Explore Reality Showcase and immerse yourself in the
+        
+                                        exhilarating world of real estate. We offer you a unique selection of
+        
+                                        properties, accompanied by exceptional customer service. Whether you are
+        
+                                        looking for a house, an apartment or an investment,
+        
+                                        begin your journey with us to make your real estate
+        
+                                        projects a reality.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <h2 class="mb-5"><span></span> </h2>
+            </div>
+        </section>
+             
+        <h2 id="who-are-we" class="mb-4">    Our goals.        </h2>
+
+        <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+            <div class="col-12 text-center">
+                <h2 class="mb-5"> <span></span> </h2>
+            </div>
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-md-6 col-lg-5 d-flex">
+                        <div class="img d-flex align-self-stretch align-items-center"
+                            style="background-image:url(assets/images/ag.jpg);">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-7 pl-lg-5 py-md-5">
+                        <div class="py-md-5">
+                            <div class="">
+                                <div class="mt-5">
+                                    <h2 class="mb-4"><span>RealityShowcase</span> <br></h2>
+                                    <p>The goal of our project is to create a modern and intuitive showcase site for our real estate agency, 
+                                        which highlights our properties and services. The site will allow visitors to easily discover our
+                                         offers thanks to smooth navigation and advanced search features, while offering administrators
+                                          a simple and effective tool to manage listings.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <h2 class="mb-5"><span></span> </h2>
+            </div>
+        </section>
+
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="row justify-content-center mb-5 pb-2">
+                        <div class="col-md-8 text-center heading-section">
+                            <h2 class="mb-4" id="who-are-we">Our Projects.</h2>
+                           
+                        </div>
+                    </div>
+           
+                    <div class="col-6 text-right">
+                        
+                      
+                    </div>
+                    <div class="col-12">
+                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3" *ngFor="let annonce of firstThreeAnnoncesrents">
+                                            <div class="card">
+                                                <img class="img-fluid" [src]="annonce.photos" alt="Image de l'annonce" class="image" style="width:100%;">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">{{ annonce.titre }}</h4>
+                                                    <p class="card-text">{{ annonce.description }}</p>
+                                                </div>													 
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary mb-3 mr-1" href="/all" role="button" data-slide="prev">
+                        <span> See More</span>      
+                  </a>
+                </div>
+            </div>
+        </section>
+        
+        
+
+     </div>
+     <app-footer></app-footer>
+ </body>
